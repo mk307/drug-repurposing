@@ -38,7 +38,9 @@ iii. Calculation of Sequence Alignment Score
 The obtained RefSeq of each target gene was aligned based on Smith–Waterman sequence alignment score (Gottlieb et al., 2011a). The following combinations for gene pairs were taken in to account:
 
 a. Drug Target Gene – Old Indication Target Gene
+
 b. Drug Target Gene – New Indication Target Gene
+
 c. Old Indication Target Gene – New Indication Target Gene
 
 To achieve the sequence alignment score, the following code in Python Language was applied with a match score = 1.0, mismatch score = -2.0, and gap score = -2.5 (Chang et al., 2010).
@@ -52,8 +54,11 @@ Score(dr,di) = √𝑺(𝒅𝒓,𝒅𝒐)∗𝑺(𝒅𝒓,𝒅𝒏)∗𝑺(𝒅�
 Where:
 
 Score(dr,di) = Drug-Disease Association Score for New Indication
+
 S(dr,do) = Sequence Alignment Score between target gene sequences of Drug and Old Indication
+
 S(dr,dn) = Sequence Alignment Score between target gene sequences of Drug and New Indication
+
 S(do,dn) = Sequence Alignment Score between target gene sequences of Old and New Indication
 
 v. Feature Scaling
@@ -70,7 +75,9 @@ i. Selected Models
 Since the target to be predicated was a numerical value, the Score(dr,di), the problem was therefore concluded to be a regression problem. The models were also selected based on the nature of the problem, and included:
 
 a. Linear Regression
+
 b. Decision Tree
+
 c. Random Forest
 
 6. Validation Method
@@ -78,7 +85,9 @@ c. Random Forest
 For the purpose of validation, Train/Test splits were applied on the data which resulted in three parts:
 
 a. Training Set
+
 b. Testing Set
+
 c. Validating Set
 
 The model was trained with Training Data, evaluated on Validation Data and lastly tested on Testing Data, which made up a total of 20% of the total data. A seed was also provided be able to reproduce this split.
