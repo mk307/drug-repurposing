@@ -62,6 +62,7 @@ S(dr,dn) = Sequence Alignment Score between target gene sequences of Drug and Ne
 S(do,dn) = Sequence Alignment Score between target gene sequences of Old and New Indication
 
 v. Feature Scaling
+
 For the purpose of Feature Scaling, Normalization was performed to convert all the similarity measures or the features in the range (0, 1). The Python code applied is mentioned as part of code applied for Model Building.
 
 4. Feature Selection
